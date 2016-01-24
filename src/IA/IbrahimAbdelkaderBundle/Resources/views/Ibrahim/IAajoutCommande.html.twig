@@ -1,0 +1,13 @@
+{# empty Twig template #}
+{%extends "IAIbrahimAbdelkaderBundle::IALayout.html.twig" %}
+{%block contenuCC2 %}<center><h1 ><font color="red">Ajout Commande :</font></h1></center> 
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{%endblock%}
+{%block titre %}  ajout Commande  {%endblock%} 
+{%block navigation %}
+    <li><a href="{{path ("IA_ajout")}}">ajout</a></li>
+    <li class="selected"><a href="{{path ("IA_ajoutCommande")}}">Ajout commande</a></li>
+    <li><a href="{{path ("IA_ajoutClient")}}">Ajout Client</a></li>
+    <li><a href="{{path ("IA_affichage")}}">affichage</a></li>{%endblock%}

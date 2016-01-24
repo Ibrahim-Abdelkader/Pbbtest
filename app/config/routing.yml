@@ -1,0 +1,7 @@
+ia_ibrahim_abdelkader:
+    resource: "@IAIbrahimAbdelkaderBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

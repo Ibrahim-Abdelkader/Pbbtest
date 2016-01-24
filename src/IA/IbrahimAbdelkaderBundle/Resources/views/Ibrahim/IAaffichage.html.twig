@@ -1,0 +1,80 @@
+{# empty Twig template #}
+{# empty Twig template #}
+{%extends "IAIbrahimAbdelkaderBundle::IALayout.html.twig" %}
+
+{%block contenu %}<center><h1 ><font color="red">Page d'Affichage</font></h1></center></br>
+ {%endblock%}
+   
+{%block contenuCC %}
+    <ul><font face="christina" color="#c34c1d" size="6">Les commandes :</font></br>
+    {% for a in abdelkader %}
+        </br>
+        <li><b><font color="green" size="3">Id du commande :</font></b>
+                
+                    {{ a.IdCommande }} <a href="{{ path ("IA_suppressionCommande",{"Id_commande": a.IdCommande}) }}" >Supprimer Commande</a>
+                    
+            </li>
+            <li><font color="green" size="3">Type de commande :</font>
+                 
+                    {{ a.type }}
+                
+            </li>
+            <li><font color="green" size="3">Id du client :</font>
+                 
+                     {{ a.idClient }}
+                
+            </li>
+            <li><font color="green" size="3">Date de livraison :</font>
+                 
+                  {{ a.dateLivraison }}  
+                
+            </li>
+            <li><font color="green" size="3">Devis de la commande :</font>
+                 
+                   {{ a.devis }}   
+                
+            </li>
+       <li>-----------------------------------------------------</li>
+               
+    {% endfor %}
+     </ul></br>
+     <ul><font face="christina" color="#c34c1d" size="6">Les clients :</font></br>
+    {% for i in ibrahim %}
+            </br></br>
+            <li><b><font color="green" size="3">Id du client :</font></b>
+                
+                      {{ i.IdClient }}   <a href="{{ path ("IA_suppressionClient",{"IdClient": i.IdClient}) }}" >Supprimer Client</a>
+                      <a href="{{ path ("IA_modficationClient",{"IdClient": i.IdClient}) }}" >modifier Client</a>
+            </li>
+            <li><font color="green" size="3">Nom du client :</font>
+                
+                      {{ i.nom }}
+                
+            </li>
+            <li><font color="green" size="3">Prenom du client :</font>
+                
+                      {{ i.prenom }}
+               
+            </li>
+            <li><font color="green" size="3">Cin du client :</font>
+                
+                       {{ i.cin }}
+                
+            </li>
+            <li><font color="green" size="3">Adrese du client :</font>
+                
+                       {{ i.adresse }} 
+                
+            </li>
+            <li>-----------------------------------------------------</li>
+    
+    {% endfor %}
+     </ul>
+    
+    {%endblock%}
+{%block titre %}  affichage   {%endblock%} 
+{%block navigation %}
+    <li ><a href="{{path ("IA_ajout")}}">ajout</a></li>
+    <li><a href="{{path ("IA_suppression")}}">suppression</a></li>
+    <li><a href="{{path ("IA_ajout")}}">modification</a></li>
+    <li class="selected"><a href="{{path ("IA_affichage")}}">affichage</a></li>{%endblock%}

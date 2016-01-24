@@ -1,0 +1,4 @@
+services:
+#    ia_ibrahim_abdelkader.example:
+#        class: IA\IbrahimAbdelkaderBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

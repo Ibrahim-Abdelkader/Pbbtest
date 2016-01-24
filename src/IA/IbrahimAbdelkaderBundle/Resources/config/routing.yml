@@ -1,0 +1,36 @@
+ia_ibrahim_abdelkader_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:Default:index }
+IA_ajout:
+    path:    /ajout
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAjout }  
+IA_ajoutCommande:
+    path:    /ajoutCommande
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAjoutCommande } 
+IA_ajoutClient:
+    path:    /ajoutClient
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAjoutClient } 
+IA_suppressionCommande:
+    path:    /suppression/commande/{Id_commande}
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IASuppressionCommande }
+IA_suppressionClient:
+    path:    /suppression/client/{IdClient}
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IASuppressionClient }
+IA_suppression:
+    path:    /suppression
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IARechercheClient }
+IA_suppressionClient2:
+    path:    /suppressionClient/{IdClient}
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IARechercheClient }
+IA_modficationClient:
+    path:    /modifier/{IdClient}
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAModificationClient }
+IA_affichage:
+    path:    /affichage
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAffichage }
+IA_affichageQB:
+    path:    /affichageQB
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAffichageQueryBuilder }
+IA_affichageDQL:
+    path:    /affichageDQL
+    defaults: { _controller: IAIbrahimAbdelkaderBundle:IbrahimAbdelkader:IAAffichageDQL }

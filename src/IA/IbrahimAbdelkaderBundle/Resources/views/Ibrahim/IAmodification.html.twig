@@ -1,0 +1,15 @@
+{# empty Twig template #}
+{# empty Twig template #}
+{%extends "IAIbrahimAbdelkaderBundle::IALayout.html.twig" %}
+
+{%block contenu %}<center><h1 ><font color="red">Modification effectuée</font></h1></center> {%endblock%}
+{%block titre %}  modification   {%endblock%} 
+{%block contenuCC2 %}<center><h1 ><font color="red">Ajout Client :</font></h1></center> 
+    <form method="POST" action="{{path ('IA_modficationClient',{idClient:Ibrahim.id)}}"> {{ form_widget(form) }}</form>
+{%endblock%}
+
+{%block navigation %}
+    <li ><a href="{{path ("IA_ajout")}}">ajout</a></li>
+    <li><a href="{{path ("IA_suppression")}}">suppression</a></li>
+    <li class="selected"><a href="{{path ("IA_ajout")}}">modification</a></li>
+    <li><a href="{{path ("IA_affichage")}}">affichage</a></li>{%endblock%}

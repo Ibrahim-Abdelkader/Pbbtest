@@ -1,0 +1,29 @@
+{# empty Twig template #}
+{# empty Twig template #}
+{%extends "IAIbrahimAbdelkaderBundle::IALayout.html.twig" %}
+
+{%block contenuCC %}<center><h1 ><font color="red">Ajout Client</font></h1></center> 
+
+<form method="post" action="{{path ("IA_ajout")}}">
+<legend for="nom">Nom :</legend>
+<input type="texte" name="nom" id="nom" />
+<legend for="prenom">Prenom :</legend>
+<input type="texte" name="prenom" id="prenom" />
+<legend for="cin">Cin :</legend>
+<input type="texte" name="cin" id="cin" />
+<legend for="adresse">Adresse :</legend>
+<input type="texte" name="adresse" id="adresse" />
+<input type="submit" value="Ajouter Client"  />
+
+</form>
+
+
+
+{%endblock%}
+
+{%block titre %}  ajout   {%endblock%} 
+{%block navigation %}
+    <li class="selected"><a href="{{path ("IA_ajout")}}">ajout</a></li>
+    <li><a href="{{path ("IA_ajoutCommande")}}">Ajout commande</a></li>
+    <li><a href="{{path ("IA_ajoutClient")}}">Ajout Client</a></li>
+    <li><a href="{{path ("IA_affichage")}}">affichage</a></li>{%endblock%}
